@@ -1,9 +1,6 @@
 #### Butler Coding Bootcamp: project-1:
-
-.......................................
-
+_______________________________________
 # GifCast
-
 ---
 
 - As a user, I want to search for a city...
@@ -41,14 +38,15 @@
 
 ## Initial Design:
 
+![GIFCAST](https://user-images.githubusercontent.com/100164686/163264370-fa9311bf-5930-496d-84fd-4a5bce1eb129.png)
 
-#### \* created with Excalidraw
+##### \* created with Excalidraw
 
 ---
 
 ---
 
-#### MADE BY:
+##### MADE BY:
 
 - Sam Bowen
 - Jason Cardenas
