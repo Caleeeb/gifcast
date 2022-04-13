@@ -1,9 +1,6 @@
 #### Butler Coding Bootcamp: project-1:
-
-.......................................
-
+_______________________________________
 # GifCast
-
 ---
 
 - As a user, I want to search for a city...
