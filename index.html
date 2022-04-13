@@ -16,19 +16,48 @@
 
 <body>
     <header>
+
         <!-- main header, center -->
         <h1>Gifcast</h1>
+
         <!-- subheader, under main, center. -->
         <h3>Your current weather with a visual.</h3>
     </header>
+
     <!-- main-container, holding all items. Flex. -->
-    <main id="main-container">
-        <!-- could use a card for the city entry form/input (center) -->
-        <!-- application explination textbox under the input card (center) -->
+    <main id="main-container" class="">
 
-        <!-- empty elements to give a destination for the openweatherapp data (left side) -->
+        <!-- the main content row holding the three columns -->
+        <div id="content" class="row">
 
-        <!-- empty elements to give a destination for the GIPHY data (right side) -->
+            <!-- could use a card for the city entry form/input (center) -->
+            <form id="city-form" class="">
+                <p class="">Search for any city:</p>
+                <input id="city-input" class="" type="text" placeholder="Enter a city for the current weather"
+                    aria-label="Enter a city for the current weather">
+                <div id="card-body">
+                    <a id="city-button" class="waves-effect waves-light btn">button</a>
+
+                    <!-- application explination textbox under the input card (center) -->
+                    <p id="card-text"> **Description of app** </p>
+                </div>
+            </form>
+
+            <!-- empty elements to give a destination for the openweatherapp data (left side) -->
+            <div id="current-weather-box" class="hide">
+                <div id="weather-body">
+                    <h3 id="city-given" class=""></h3>
+                    <img id="weather-icon" alt="">
+                    <p id="description"></p>
+                    <p id="temp"></p>
+                </div>
+            </div>
+
+            <!-- empty elements to give a destination for the GIPHY data (right side) -->
+            <div id="giphy-box" class=""></div>
+        </div>
+
+
 
     </main>
     <script src="./assets/js/script.js"></script>
