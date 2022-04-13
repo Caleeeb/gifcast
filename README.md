@@ -12,6 +12,7 @@ _______________________________________
 
 - https://developers.giphy.com/
 - https://openweathermap.org/api
+- http://materializecss.com
 - https://excalidraw.com/
 
 ### Breakdown of tasks and roles:
