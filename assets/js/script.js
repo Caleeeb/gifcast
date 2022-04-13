@@ -12,6 +12,9 @@ let cityNameEl = document.getElementById("city-given");
 let descriptionEl = document.getElementById("description");
 let currentWeatherEl = document.getElementById("current-weather-box");
 let weatherIconEl = document.getElementById("weather-icon");
+let gifImageEl = document.getElementById("gif");
+let gifImageRefEl = document.getElementById("gif-href");
+let gifBoxEl = document.getElementById("giphy-box");
 
 // openweathermap api key
 const WeatherAPIKey = "3a91f7f0ab2106256c3b3aafbbd9cd58";
@@ -66,14 +69,22 @@ function createWeather() {
 // get desription of the weather data and put through giphy api
 function getGif() {
     let weatherDescription = weatherData.weather[0].description;
-    let gifURL = `https://api.giphy.com/v1/gifs/search?api_key=jFIH8bO506ntjvslzFtCEzBLL2oxlhhH&q=${weatherDescription}&limit=25&offset=0&rating=pg-13&lang=en`;
+    let gifURL = `https://api.giphy.com/v1/gifs/search?api_key=jFIH8bO506ntjvslzFtCEzBLL2oxlhhH&q=nature+${weatherDescription}&limit=25&offset=0&rating=pg-13&lang=en`;
+
     fetch(gifURL)
         .then(function (response) {
 
             // testing output
             response.json().then(function (result) {
+                gifBoxEl.classList.remove("hide");
                 gifData = result;
                 console.log(JSON.stringify(gifData));
+
+                // add gif to img element
+                gifImageEl.setAttribute("src", gifData.data[0].embed_url);
+                gifImageRefEl.setAttribute("href", gifData.data[0].url)
+
+
             })
         })
 };
