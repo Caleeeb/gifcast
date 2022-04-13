@@ -13,9 +13,9 @@
 
 ### Technologies used:
 
-https://developers.giphy.com/
-https://openweathermap.org/api
-https://excalidraw.com/
+- https://developers.giphy.com/
+- https://openweathermap.org/api
+- https://excalidraw.com/
 
 ### Breakdown of tasks and roles:
 
@@ -41,7 +41,6 @@ https://excalidraw.com/
 
 ## Initial Design:
 
-assets\images\project-1-layout.PNG
 
 #### \* created with Excalidraw
 
