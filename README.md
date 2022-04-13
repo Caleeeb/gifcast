@@ -11,7 +11,7 @@
 
 ---
 
-## Technologies used:
+### Technologies used:
 
 https://developers.giphy.com/
 https://openweathermap.org/api
