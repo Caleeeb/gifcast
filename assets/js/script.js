@@ -125,7 +125,7 @@ function renderHistory() {
         })
         historyListEl.append(storedItem);
     }
-}
+};
 
 // check local storage for previously searched cities
 function checkHistory() {
@@ -134,14 +134,21 @@ function checkHistory() {
         historyEl.classList.remove("hide");
         getWeather(searchHistory[searchHistory.length - 1]);
     }
-}
+};
 
 // on window load run function checkHistory
 window.onload = checkHistory();
 
+// check local storage for previously searched cities
+function checkHistory() {
+    renderHistory();
+    if (searchHistory.length > 0) {
+        historyEl.classList.remove("hide");
+        getWeather(searchHistory[searchHistory.length - 1]);
+    }
+};
 
+// on window load run function checkHistory
+window.onload = checkHistory();
 
 // giphy reload button (time permitting)
-
-
-
