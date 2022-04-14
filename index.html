@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <!-- CSS Style Sheet  -->
+        <link href="./assets/css/style.css" rel="stylesheet" type="text/css" media="all">
 
     <title>Gifcast: Weather with a visual.</title>
 
@@ -22,7 +23,7 @@
         <h1>Gifcast</h1>
 
         <!-- subheader, under main, center. -->
-        <h3>Your current weather, with a visual.</h3>
+        <h3>Your current weather with a visual.</h3>
     </header>
 
     <!-- main-container, holding all items. Flex. -->
@@ -37,7 +38,17 @@
                 <input id="city-input" class="" type="text" placeholder="Enter a city for the current weather"
                     aria-label="Enter a city for the current weather">
                 <div id="card-body">
-                    <a id="city-button" class="waves-effect waves-light btn">button</a>
+                    <a id="city-button" class="waves-effect waves-light btn">search</a>
+
+                    <!-- search items from local storage are listed-->
+                    <div id="history" class="collection hide">
+                        <div id="history-list">
+
+                            <!-- anchor element added here for history list of cities -->
+
+                        </div>
+                        <a id="clear-history" class="waves-effect waves-light btn">clear history</a>
+                    </div>
 
                     <!-- application explination textbox under the input card (center) -->
                     <p id="card-text"> **Description of app** </p>
@@ -55,15 +66,19 @@
             </div>
 
             <!-- empty elements to give a destination for the GIPHY data (right side) -->
-            <div id="giphy-box" class=""></div>
+            <div id="giphy-box" class="hide">
+                "<iframe id="gif" src="" width="480" height="269" frameBorder="0" class="giphy-embed"
+                    allowFullScreen></iframe>
+                <p><a id="gif-href" href=""></a></p>
+            </div>
         </div>
 
 
 
     </main>
     <script src="./assets/js/script.js"></script>
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 
 </html>

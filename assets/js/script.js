@@ -12,6 +12,13 @@ let cityNameEl = document.getElementById("city-given");
 let descriptionEl = document.getElementById("description");
 let currentWeatherEl = document.getElementById("current-weather-box");
 let weatherIconEl = document.getElementById("weather-icon");
+let gifImageEl = document.getElementById("gif");
+let gifImageRefEl = document.getElementById("gif-href");
+let gifBoxEl = document.getElementById("giphy-box");
+let historyEl = document.getElementById("history");
+let historyListEl = document.getElementById("history-list");
+let searchHistory = JSON.parse(localStorage.getItem("search")) || [];
+let deleteBtnEl = document.getElementById("clear-history");
 
 // openweathermap api key
 const WeatherAPIKey = "3a91f7f0ab2106256c3b3aafbbd9cd58";
@@ -65,15 +72,23 @@ function createWeather() {
 
 // get desription of the weather data and put through giphy api
 function getGif() {
-    let weatherDescription = weatherData.weather[0].description;
+    let weatherDescription = weatherData.weather[0].main;
     let gifURL = `https://api.giphy.com/v1/gifs/search?api_key=jFIH8bO506ntjvslzFtCEzBLL2oxlhhH&q=${weatherDescription}&limit=25&offset=0&rating=pg-13&lang=en`;
+
     fetch(gifURL)
         .then(function (response) {
 
             // testing output
             response.json().then(function (result) {
+                gifBoxEl.classList.remove("hide");
                 gifData = result;
                 console.log(JSON.stringify(gifData));
+
+                // add gif to img element
+                gifImageEl.setAttribute("src", gifData.data[0].embed_url);
+                gifImageRefEl.setAttribute("href", gifData.data[0].url)
+
+
             })
         })
 };
@@ -83,19 +98,45 @@ searchEl.addEventListener("click", function () {
 
     // variable for what city was entered
     const searchInput = cityEl.value;
-
-    // check if input is blank
+    historyEl.classList.remove("hide");
+    searchHistory.push(searchInput);
+    localStorage.setItem("search", JSON.stringify(searchHistory));
     getWeather(searchInput);
+    renderHistory();
+});
+
+// function to clear history on button click.
+deleteBtnEl.addEventListener("click", function () {
+    localStorage.clear();
+    searchHistory = [];
+    historyEl.classList.add("hide");
+    renderHistory();
 });
 
 
-
-
-// fetch giphy data and display gif from weather description data
-
 // local storage function
+function renderHistory() {
+    historyListEl.innerHTML = "";
+    for (let i = 0; i < searchHistory.length; i++) {
+        const storedItem = document.createElement("a");
+        storedItem.innerHTML = "<a href='#!' class='collection-item' value='" + searchHistory[i] + "'>" + searchHistory[i] + "</a>";
+        storedItem.addEventListener("click", function () {
+            getWeather(searchHistory[i]);
+        })
+        historyListEl.append(storedItem);
+    }
+}
+
+// check local storage for previously searched cities
+function checkHistory() {
+    renderHistory();
+    if (searchHistory.length > 0) {
+        historyEl.classList.remove("hide");
+        getWeather(searchHistory[searchHistory.length - 1]);
+    }
+}
+
+// on window load run function checkHistory
+window.onload = checkHistory();
 
 // giphy reload button (time permitting)
-
-
-
