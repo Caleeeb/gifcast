@@ -86,7 +86,7 @@ function getGif() {
 
                 // add gif to img element
                 gifImageEl.setAttribute("src", gifData.data[0].embed_url);
-                gifImageRefEl.setAttribute("href", gifData.data[0].downsized_small.url)
+                gifImageRefEl.setAttribute("href", gifData.data[0].url)
 
 
             })
