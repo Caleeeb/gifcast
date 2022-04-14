@@ -35,10 +35,10 @@ function getWeather(cityName) {
 
     // after url is formed, fetch data
     fetch(weatherURL)
-        .then(function (response) {
+        .then(function(response) {
 
             // testing output
-            response.json().then(function (result) {
+            response.json().then(function(result) {
 
                 // create variables to hold data
                 weatherData = result;
@@ -76,10 +76,10 @@ function getGif() {
     let gifURL = `https://api.giphy.com/v1/gifs/search?api_key=jFIH8bO506ntjvslzFtCEzBLL2oxlhhH&q=${weatherDescription}&limit=25&offset=0&rating=pg-13&lang=en`;
 
     fetch(gifURL)
-        .then(function (response) {
+        .then(function(response) {
 
             // testing output
-            response.json().then(function (result) {
+            response.json().then(function(result) {
                 gifBoxEl.classList.remove("hide");
                 gifData = result;
                 console.log(JSON.stringify(gifData));
@@ -94,7 +94,7 @@ function getGif() {
 };
 
 // search/start button
-searchEl.addEventListener("click", function () {
+searchEl.addEventListener("click", function() {
 
     // variable for what city was entered
     const searchInput = cityEl.value;
@@ -106,7 +106,7 @@ searchEl.addEventListener("click", function () {
 });
 
 // function to clear history on button click.
-deleteBtnEl.addEventListener("click", function () {
+deleteBtnEl.addEventListener("click", function() {
     localStorage.clear();
     searchHistory = [];
     historyEl.classList.add("hide");
@@ -120,7 +120,7 @@ function renderHistory() {
     for (let i = 0; i < searchHistory.length; i++) {
         const storedItem = document.createElement("a");
         storedItem.innerHTML = "<a href='#!' class='collection-item' value='" + searchHistory[i] + "'>" + searchHistory[i] + "</a>";
-        storedItem.addEventListener("click", function () {
+        storedItem.addEventListener("click", function() {
             getWeather(searchHistory[i]);
         })
         historyListEl.append(storedItem);
@@ -140,8 +140,19 @@ function checkHistory() {
 window.onload = checkHistory();
 
 
+// serach on enter button function
+document.getElementById("city-button")
+    .addEventListener("keyup", function(event) {
+        event.preventDefault();
+        if (KeyboardEvent === 13) {
+            then(); {
+                createWeather();
+            }
+        }
+    });
+
+function buttonCode() {
+    alert("Button code executed.");
+}
 
 // giphy reload button (time permitting)
-
-
-

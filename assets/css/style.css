@@ -1,8 +1,8 @@
  /*  Maintain a consistent gif size when loading in from API */
  
  .gifSize {
-     max-width: 300px;
-     max-height: 300px;
+     max-width: 275px;
+     max-height: 275px;
  }
  /* adjust the posiiton of the weather info and gif */
  
