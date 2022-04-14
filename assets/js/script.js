@@ -140,10 +140,6 @@ function checkHistory() {
 window.onload = checkHistory();
 
 
-function buttonCode() {
-    alert("Button code executed.");
-}
-
 // giphy reload button (time permitting)
 
 // function to add class hide to weather and gif when clear serach history
