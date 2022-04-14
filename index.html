@@ -18,20 +18,20 @@
     <header>
 
         <!-- main header, center -->
-        <h1>Gifcast</h1>
+        <h1 class="center-align">Gifcast</h1>
 
         <!-- subheader, under main, center. -->
-        <h3>Your current weather with a visual.</h3>
+        <h3 class="center-align">Your current weather with a visual.</h3>
     </header>
 
     <!-- main-container, holding all items. Flex. -->
-    <main id="main-container" class="">
+    <main id="main-container" class="row">
 
         <!-- the main content row holding the three columns -->
-        <div id="content" class="row">
+        <div id="content" class="">
 
             <!-- could use a card for the city entry form/input (center) -->
-            <form id="city-form" class="">
+            <form id="city-form" class="container center-align">
                 <p class="">Search for any city:</p>
                 <input id="city-input" class="" type="text" placeholder="Enter a city for the current weather"
                     aria-label="Enter a city for the current weather">
@@ -54,7 +54,7 @@
             </form>
 
             <!-- empty elements to give a destination for the openweatherapp data (left side) -->
-            <div id="current-weather-box" class="hide">
+            <div id="current-weather-box" class="hide col s3 m3 l3 pull-s9">
                 <div id="weather-body">
                     <h3 id="city-given" class=""></h3>
                     <img id="weather-icon" alt="">
@@ -64,14 +64,12 @@
             </div>
 
             <!-- empty elements to give a destination for the GIPHY data (right side) -->
-            <div id="giphy-box" class="hide">
-                "<iframe id="gif" src="" width="480" height="269" frameBorder="0" class="giphy-embed"
+            <div id="giphy-box" class="hide col push-s6">
+                <iframe id="gif" src="" width="480" height="269" frameBorder="0" class="giphy-embed gifSize"
                     allowFullScreen></iframe>
                 <p><a id="gif-href" href=""></a></p>
             </div>
         </div>
-
-
 
     </main>
     <script src="./assets/js/script.js"></script>
