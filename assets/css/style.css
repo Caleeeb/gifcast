@@ -4,11 +4,14 @@
 }
 
 .positioned-left {
-    float: left;
-    margin-top: -275px;
+    margin-top: -285px;
+    margin-right: 150px;
 }
 
 .positioned-right {
-    float: right;
-    margin-top: -275px;
+    margin-top: -285px;
+}
+
+.border {
+    border: solid 1px black;
 }
