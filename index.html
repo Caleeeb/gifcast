@@ -29,7 +29,7 @@
     <main id="main-container" class="row">
 
         <!-- the main content row holding the three columns -->
-        <div id="content" class="">
+        <div id="content" class="center-align">
 
             <!-- could use a card for the city entry form/input (center) -->
             <form id="city-form" class="container center-align">
@@ -54,17 +54,17 @@
             </form>
 
             <!-- empty elements to give a destination for the openweatherapp data (left side) -->
-            <div id="current-weather-box" class="hide col s3 m3 l3 pull-s9 border">
-                <div id="weather-body">
+            <div id="current-weather-box" class="hide col s3 ">
+                <div id="weather-body" class="positioned-left">
                     <h3 id="city-given" class=""></h3>
-                    <img id="weather-icon" alt="" class="border">
+                    <img id="weather-icon" alt="">
                     <p id="description"></p>
                     <p id="temp"></p>
                 </div>
             </div>
 
             <!-- empty elements to give a destination for the GIPHY data (right side) -->
-            <div id="giphy-box" class="hide col push-s6">
+            <div id="giphy-box" class="hide col push-s7 positioned-right">
                 <iframe id="gif" src="" width="480" height="269" frameBorder="0" class="giphy-embed gifSize" allowFullScreen></iframe>
                 <p>
                     <a id="gif-href" href=""></a>
