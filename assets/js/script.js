@@ -127,6 +127,7 @@ function renderHistory() {
     }
 }
 
+
 // check local storage for previously searched cities
 function checkHistory() {
     renderHistory();
