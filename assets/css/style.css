@@ -1,17 +1,17 @@
-.gifSize {
-    max-width: 250px;
-    max-height: 250px;
-}
-
-.positioned-left {
-    margin-top: -285px;
-    margin-right: 150px;
-}
-
-.positioned-right {
-    margin-top: -285px;
-}
-
-.border {
-    border: solid 1px black;
-}
+ .gifSize {
+     max-width: 300px;
+     max-height: 300px;
+ }
+ 
+ .positioned-left {
+     margin-top: -270px;
+     margin-right: 150px;
+ }
+ 
+ .positioned-right {
+     margin-top: -290px;
+ }
+ 
+ .border {
+     border: solid 1px black;
+ }
