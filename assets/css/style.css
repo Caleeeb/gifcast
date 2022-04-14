@@ -7,15 +7,21 @@
  /* adjust the posiiton of the weather info and gif */
  
  .positioned-left {
-     margin-top: -272px;
+     margin-top: -197px;
      margin-right: 149px;
+     position: fixed;
  }
  
  .positioned-right {
-     margin-top: -292px;
+     margin-top: -197px;
+     position: fixed;
  }
  /* border class to see final placement of div comment out or delete later */
  
  .border {
      border: solid 1px black;
+ }
+ 
+ header {
+     background-image: url(/assets/images/clouds.jpg);
  }
