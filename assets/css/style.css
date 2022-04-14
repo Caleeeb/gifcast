@@ -9,17 +9,20 @@
  .positioned-left {
      margin-top: -197px;
      margin-right: 149px;
-     position: fixed;
  }
  
  .positioned-right {
      margin-top: -197px;
-     position: fixed;
  }
  /* border class to see final placement of div comment out or delete later */
  
  .border {
      border: solid 1px black;
+ }
+ 
+ .border-cards {
+     border: solid 1px black;
+     border-radius: 15%;
  }
  
  header {
