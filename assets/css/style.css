@@ -28,3 +28,8 @@
  header {
      background-image: url(/assets/images/clouds.jpg);
  }
+ 
+ .full {
+     border: 1x solid black;
+     background-color: gray;
+ }
