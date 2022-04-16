@@ -28,7 +28,7 @@
 }
 
 header {
-    background-image: url(/assets/images/clouds.jpg);
+    background-image: url("/assets/images/clouds.jpg");
 }
 
 .full {
