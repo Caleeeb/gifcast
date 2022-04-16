@@ -21,9 +21,9 @@ Motivation for development: Build upon previous projects and hone our Web Develo
 
 ### Breakdown of tasks and roles:
 
-- Caleb: Script/pseudo-code/idea
-- Jason: Edited HTML structure via materialize and css/set up repo and presentation
-- Sam: Designed and edited CSS & ReadME
+Caleb: Script/pseudo-code/idea
+Jason: Edited HTML structure via materialize and css/set up repo and presentation
+Sam: Designed and edited CSS & ReadME
 
 ### Challenges:
 

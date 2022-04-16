@@ -1,31 +1,37 @@
+/*  Maintain a consistent gif size when loading in from API */
 
- /*  Maintain a consistent gif size when loading in from API */
- 
- .gifSize {
-     max-width: 275px;
-     max-height: 275px;
- }
- /* adjust the posiiton of the weather info and gif */
- 
- .positioned-left {
-     margin-top: -197px;
-     margin-right: 149px;
- }
- 
- .positioned-right {
-     margin-top: -197px;
- }
- /* border class to see final placement of div comment out or delete later */
- 
- .border {
-     border: solid 1px black;
- }
- 
- .border-cards {
-     border: solid 1px black;
-     border-radius: 15%;
- }
- 
- header {
-     background-image: url(/assets/images/clouds.jpg);
- }
+.gifSize {
+    max-width: 275px;
+    max-height: 275px;
+}
+
+/* adjust the posiiton of the weather info and gif */
+
+.positioned-left {
+    margin-top: -197px;
+    margin-right: 149px;
+}
+
+.positioned-right {
+    margin-top: -197px;
+}
+
+/* border class to see final placement of div comment out or delete later */
+
+.border {
+    border: solid 1px black;
+}
+
+.border-cards {
+    border: solid 1px black;
+    border-radius: 15%;
+}
+
+header {
+    background-image: url(/assets/images/clouds.jpg);
+}
+
+.full {
+    border: 1x solid black;
+    background-color: gray;
+}

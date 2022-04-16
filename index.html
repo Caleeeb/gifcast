@@ -5,17 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <!-- cdn for materialize -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" integrity="sha512-UJfAaOlIRtdR+0P6C3KUoTDAxVTuy3lnSXLyLKlHYJlcSU8Juge/mjeaxDNMlw9LgeIotgz5FP8eUQPhX1q10A==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
-    <!-- CSS Style Sheet  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+        integrity="sha512-UJfAaOlIRtdR+0P6C3KUoTDAxVTuy3lnSXLyLKlHYJlcSU8Juge/mjeaxDNMlw9LgeIotgz5FP8eUQPhX1q10A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link href="./assets/css/style.css" rel="stylesheet" type="text/css" media="all">
-
-        <!--Import Google Icon Font-->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      
-
 
     <title>Gifcast: Weather with a visual.</title>
 
@@ -31,17 +26,31 @@
         <h3 class="center-align">Your current weather with a visual.</h3>
     </header>
 
+    <div class="row container">
+        <div class="col s1">1</div>
+        <div class="col s1">2</div>
+        <div class="col s1">3</div>
+        <div class="col s1">4</div>
+        <div class="col s1">5</div>
+        <div class="col s1">6</div>
+        <div class="col s1">7</div>
+        <div class="col s1">8</div>
+        <div class="col s1">9</div>
+        <div class="col s1">10</div>
+        <div class="col s1">11</div>
+        <div class="col s1">12</div>
+    </div>
     <!-- main-container, holding all items. Flex. -->
-    <main id="main-container" class="row">
+    <main id="main-container" class="container">
 
         <!-- the main content row holding the three columns -->
-        <div id="content" class="center-align">
+        <div id="content" class="row">
 
             <!-- could use a card for the city entry form/input (center) -->
-            <form id="city-form" class="container center-align border .input-field">
+            <form id="city-form" class="col s6 offset-s3 card">
                 <p class="">Search for any city:</p>
-                <i class="material-icons prefix">location_city</i>
-                <input id="city-input" class="" type="text" placeholder="Enter a city for the current weather" aria-label="Enter a city for the current weather">
+                <input id="city-input" type="text" placeholder="Enter a city for the current weather"
+                    aria-label="Enter a city for the current weather">
                 <div id="card-body">
                     <a id="city-button" class="waves-effect waves-light btn">search</a>
 
@@ -61,8 +70,8 @@
             </form>
 
             <!-- empty elements to give a destination for the openweatherapp data (left side) -->
-            <div id="current-weather-box" class="hide col s3">
-                <div id="weather-body" class="positioned-left border-card card small">
+            <div id="current-weather-box" class="hide col s3 pull-s9">
+                <div id="weather-body" class="border-card card small">
                     <h4 id="city-given" class="card-title"></h4>
                     <img id="weather-icon" alt="" class="card-image">
                     <div class="card-content collection">
@@ -74,8 +83,9 @@
             </div>
 
             <!-- empty elements to give a destination for the GIPHY data (right side) -->
-            <div id="giphy-box" class="hide col push-s7 positioned-right border-card card">
-                <iframe id="gif" src="" width="480" height="269" frameBorder="0" class="giphy-embed gifSize card-image" allowFullScreen></iframe>
+            <div id="giphy-box" class="hide col 3 push-s9 border-card card">
+                <iframe id="gif" src="" width="480" height="269" frameBorder="0" class="giphy-embed gifSize card-image"
+                    allowFullScreen></iframe>
                 <p>
                     <a id="gif-href" href=""></a>
                 </p>
@@ -83,9 +93,8 @@
         </div>
 
     </main>
+    
     <script src="./assets/js/script.js"></script>
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 
 </html>
