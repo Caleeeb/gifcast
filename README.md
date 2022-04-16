@@ -4,7 +4,7 @@
 
 # GifCast
 
-Weather-app meets GIF-app. It makes you happy no matter what the weather is.
+#### Weather-app meets GIF-app. It makes you happy no matter what the weather is.
 
 - As a user, I want to search for a city...
 - So that I can see the current weather for the city, AND get a corresponding gif to match the forecast data.
