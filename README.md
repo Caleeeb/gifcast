@@ -1,59 +1,74 @@
-#### Butler Coding Bootcamp: project-1:
-
+#### Butler Coding Bootcamp  ||   Project 1:
 ---
-
 # GifCast
-
-#### Weather-app meets GIF-app. It makes you happy no matter what the weather is.
-
-- As a user, I want to search for a city...
-- So that I can see the current weather for the city, AND get a corresponding gif to match the forecast data.
-
-Description: A weather API used to collect data on local forecast, and then return a gif based on the current weather data.
-Motivation for development: Build upon previous projects and hone our Web Development skills.
+#### Weather-app meets GIF-app. GifCast makes you happy no matter what the weather is!
+---
+#### As a user, 
+I want to search for a city...
+#### So that 
+I can see the current weather for the city and get a corresponding gif for the forecast data.
 
 ---
 
-### Technologies used:
+### Breakdown of Tasks and Roles:
 
-- https://developers.giphy.com/
-- https://openweathermap.org/api
-- http://materializecss.com
-- https://excalidraw.com/
+Caleb: 
+- Original idea 
+- Pseudo-Code
+- Script
+- API Function
 
-### Breakdown of tasks and roles:
+Jason: 
+- Set up Materialize & HTML 
+- Edit style sheet 
+- Created GitHub repository & Google Docs
 
-Caleb: Script/pseudo-code/idea
-Jason: Edited HTML structure via materialize and css/set up repo and presentation
-Sam: Designed and edited CSS & ReadME
+Sam: 
+- Designed ReadME 
+- Edit Materialize & HTML 
+- Edit Style sheet
 
 ### Challenges:
-
-1. Scheduling conflicts with other team members
+1. Scheduling conflicts with other team members.
 2. Working together as a group for the first time
 3. Navigating GitHub in a collaboration.
 4. Issues using local storage.
 
 ### Successes:
-
 1. Great ideas that showcase our knowledge and strengths.
 2. A simple - yet effective - application with smooth design and functionality.
 3. Programming two different web APIs to communicate and share data to improve the user experience.
+4. Great presentation from the whole group.
 
 ---
 
 ## Initial Design:
-
 ![GIFCAST](https://user-images.githubusercontent.com/100164686/163264370-fa9311bf-5930-496d-84fd-4a5bce1eb129.png)
-
 ##### \* created with Excalidraw
+#### Motivation for development:    
+Build upon previous projects and hone our new Web Development skills.
 
 ---
+
+## Demo Design:
+
+#### Description:    
+A weather API used to collect data on local forecast, and then return a gif based on the current weather data.
+
+---
+
+## Final Look:
+
+https://cardenas1850.github.io/project-1/
+---
+
+### Technologies used:
+- https://developers.giphy.com/
+- https://openweathermap.org/api
+- http://materializecss.com
+- https://excalidraw.com/
 
 ---
 
 ##### MADE BY:
-
-- Sam Bowen
-- Jason Cardenas
-- Caleb Day
+Sam Bowen, Jason Cardenas, and Caleb Day
