@@ -1,7 +1,7 @@
 #### Butler Coding Bootcamp  ||   Project 1:
 ---
 # GifCast
-#### Weather-app meets GIF-app. GifCast makes you happy no matter what the weather is!
+#### Weather-app meets GIF-app
 ---
 #### As a user, 
 I want to search for a city...
