@@ -38,11 +38,9 @@ Motivation for development: Build upon previous projects and hone our Web Develo
 2. A simple - yet effective - application with smooth design and functionality.
 3. Programming two different web APIs to communicate and share data to improve the user experience.
 ---
-
 ## Initial Design:
 
 ![GIFCAST](https://user-images.githubusercontent.com/100164686/163264370-fa9311bf-5930-496d-84fd-4a5bce1eb129.png)
-
 
 ##### \* created with Excalidraw
 ---
