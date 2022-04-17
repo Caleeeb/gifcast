@@ -25,8 +25,7 @@
 
 <!-- MAIN HEADER -->
     <header class="center-align">
-
-        <div class="image">
+        <div class="main-title">
             <h1>GifCast</h1>
             <p>Your current weather - with a visual</p>
         </div>
@@ -46,7 +45,8 @@
 
                 <h4 id="city-given"></h4>
 
-                <img id="weather-icon" alt="a simple icon displaying the weather forecast (such as a sun, cloud, rain, etc)">
+                <img id="weather-icon" 
+                    alt="a simple icon displaying the weather forecast (such as a sun, cloud, rain, etc)">
 
                 <div class="weather-content collection">
                     <p id="description" class="collection-item"></p>
@@ -55,7 +55,7 @@
             </div>
 
 
-<!-- CITY SEARCH CARD (center) -->
+<!-- CITY SEARCH FORM (center) -->
             <form id="city-form" class="col s12 l4 container center-align col s3 border .input-field">
 
                 <p class="flow-text">Search for any city:</p>
@@ -100,21 +100,26 @@
 
         </section>
     </main>
+
     <br />
 
 
 <!-- FOOTER: -->
-    <footer class="orange-text text-lighten-4">
+    <footer>
+        <section id="footer-content" class="row blue-grey darken-3">
+            <div id="footer-title" class="col s4 l4 container left-align orange-text text-lighten-4 valign-wrapper">
+                <h4>GifCast</h4>
+            </div>
 
-        <div id="footer-title" class="left-align">
-            <h4>GifCast</h4>
-        </div>
+            <div id="footer-explain" class="col s4 l4 container center-align white-text">
+                <p>Weather-app meets GIF-app</p>
+                <p>GifCast makes you happy no matter what the weather is!</p>
+            </div>
 
-        <div id="app-explain"class="center-align">
-            <p>Weather-app meets GIF-app 
-                <br />
-                GifCast makes you happy no matter what the weather is!</p>
-        </div>
+            <div id="footer-icon" class="col s4 l4 right-align white-text valign">
+                <i class="large material-icons">cloud</i>
+            </div>
+        </section>
     </footer>
 
 
