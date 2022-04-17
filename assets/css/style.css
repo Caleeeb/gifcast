@@ -1,34 +1,36 @@
 /*  Maintain a consistent gif size when loading in from API */
 .gifSize {
-    max-width: 275px;
-    max-height: 275px;
+    max-width: 400px;
+    max-height: 400px;
 }
 
-/* adjust the posiiton of the weather info and gif */
-.positioned-left {
-    margin-top: -197px;
-    margin-right: 149px;
-}
-
-.positioned-right {
-    margin-top: -197px;
-}
-
-/* to see final placement of div*/
 .border {
-    border: solid 1px black;
+    border: solid 2px black;
 }
 
-.border-cards {
-    border: solid 1px black;
-    border-radius: 15%;
+
+.header {
+    padding-top: 50px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
 }
 
-header {
-    background-image: url("/assets/images/clouds.jpg");
+.image {
+    background-image: "./assets/images/clouds.jpg";
+    height: 250px;
 }
 
-.full {
-    border: 1x solid black;
-    background-color: gray;
+
+footer {
+    background: #37474f;
+    margin: 0px 50px 0px 0px;
+    padding: 0px 30px 0px 20px;
+    bottom: 0px;
+    width: 100%;
+    height: 80px;
+}
+
+footer div {
+    
 }

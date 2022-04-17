@@ -10,8 +10,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
         integrity="sha512-UJfAaOlIRtdR+0P6C3KUoTDAxVTuy3lnSXLyLKlHYJlcSU8Juge/mjeaxDNMlw9LgeIotgz5FP8eUQPhX1q10A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- CSS Style Sheet: -->
+
+        <!-- CSS Style Sheet: -->
     <link href="./assets/css/style.css" rel="stylesheet" type="text/css" media="all">
+
     <!-- Import Google Icon Font: -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -23,70 +25,73 @@
 
 <!-- MAIN HEADER -->
     <header class="center-align">
-        <h1 class="">GifCast</h1>
-        <!-- SUBHEADER *under main (center) -->
-        <h5>Your current weather - with a visual</h5>
+
+        <div class="image">
+            <h1>GifCast</h1>
+            <p>Your current weather - with a visual</p>
+        </div>
     </header>
+    <br />
 
 
 <!-- MAIN CONTAINER (flex) -->
     <main id="container" class="center-align">
+
         <!-- the main content row holding the three columns -->
         <section id="content" class="row">
 
 
-    <!-- OPEN WEATHER API DATA (left) -->
+<!-- OPEN WEATHER API DATA (left) -->
             <div id="current-weather-box" class="col s12 l4 container center-align hide">
-                <div id="weather-body" class="border-card card">
-                    <h4 id="city-given" class="card-title"></h4>
 
-                    <img id="weather-icon" alt="" class="card-image">
+                <h4 id="city-given"></h4>
 
-                    <div class="card-content collection">
-                        <p id="description" class="collection-item border-card"></p>
-                        <p id="temp" class="collection-item"></p>
-                    </div>
+                <img id="weather-icon" alt="a simple icon displaying the weather forecast (such as a sun, cloud, rain, etc)">
+
+                <div class="weather-content collection">
+                    <p id="description" class="collection-item"></p>
+                    <p id="temp" class="collection-item"></p>
                 </div>
             </div>
 
 
-    <!-- CITY SEARCH CARD (center) -->
+<!-- CITY SEARCH CARD (center) -->
             <form id="city-form" class="col s12 l4 container center-align col s3 border .input-field">
+
                 <p class="flow-text">Search for any city:</p>
                 <i class="material-icons">location_city</i>
                 
                 <input id="city-input" class="" type="text" placeholder="Enter a city for the current weather"
                     aria-label="Enter a city for the current weather">
 
-        <!-- CITY SEARCH BODY -->
-                    <div id="card-body">
-                    <a id="city-button" class="btn cyan darken-4 waves-effect waves-light">
+    <!-- CITY SEARCH -->
+                    <div>
+                        <a id="city-button" class="btn cyan darken-3 waves-effect waves-light">
                         <span>search</span>
                         <i class="material-icons right">search</i>
                     </a>
 
-        <!-- LOCAL STORAGE HISTORY -->
+    <!-- LOCAL STORAGE HISTORY -->
                     <div id="history" class="collection hide">
+
                         <div id="history-list">
                         <!-- *anchor element added here for history list of cities -->
                         </div>
 
-            <!-- clear history -->
-                        <a id="clear-history" class="btn-small cyan darken-4 waves-effect waves-light">
+                        <!-- clear history -->
+                        <a id="clear-history" class="btn-small cyan darken-3 waves-effect waves-light">
                             <span>clear history</span>
                             <i class="material-icons right">clear</i>
                         </a>
                     </div>
-
-            <!-- app explination -->
-                    <p id="card-text">Weather-app meets GIF-app. GifCast makes you happy no matter what the weather is!</p>
                 </div>
             </form>
 
 
-    <!-- GIPHY DATA (right) -->
-        <div id="giphy-box" class="col s12 l4 container center-align border-card card hide">
-            <iframe id="gif" src="" width="480" height="269" frameBorder="0" class="giphy-embed gifSize card-image"
+<!-- GIPHY DATA (right) -->
+        <div id="giphy-box" class="col s12 l4 container center-align hide">
+
+            <iframe id="gif" src="" width="480" height="269" frameBorder="0" class="giphy-embed gifSize"
                 allowFullScreen></iframe>
             <p>
                 <a id="gif-href" href=""></a>
@@ -95,6 +100,22 @@
 
         </section>
     </main>
+    <br />
+
+
+<!-- FOOTER: -->
+    <footer class="orange-text text-lighten-4">
+
+        <div id="footer-title" class="left-align">
+            <h4>GifCast</h4>
+        </div>
+
+        <div id="app-explain"class="center-align">
+            <p>Weather-app meets GIF-app 
+                <br />
+                GifCast makes you happy no matter what the weather is!</p>
+        </div>
+    </footer>
 
 
 <!-- SCRIPTS: -->
