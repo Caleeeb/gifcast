@@ -37,7 +37,7 @@
     <main id="container" class="center-align">
 
         <!-- the main content row holding the three columns -->
-        <section id="content" class="row">
+        <section id="content" class="row valign-wrapper">
 
 
 <!-- OPEN WEATHER API DATA (left) -->
@@ -66,7 +66,7 @@
 
     <!-- CITY SEARCH -->
                     <div>
-                        <a id="city-button" class="btn cyan darken-3 waves-effect waves-light">
+                        <a id="city-button" class="btn blue-grey waves-effect waves-light">
                         <span>search</span>
                         <i class="material-icons right">search</i>
                     </a>
@@ -79,7 +79,7 @@
                         </div>
 
                         <!-- clear history -->
-                        <a id="clear-history" class="btn-small cyan darken-3 waves-effect waves-light">
+                        <a id="clear-history" class="btn-small blue-grey waves-effect waves-light">
                             <span>clear history</span>
                             <i class="material-icons right">clear</i>
                         </a>
@@ -106,18 +106,21 @@
 
 <!-- FOOTER: -->
     <footer>
-        <section id="footer-content" class="row blue-grey darken-3">
-            <div id="footer-title" class="col s4 l4 container left-align orange-text text-lighten-4 valign-wrapper">
+        <section id="footer-content" class="blue-grey darken-3" style=" display: flex; justify-content: space-around; align-items: center">
+            
+            <div id="footer-title" class="col s4 l4 center-align valign white-text">
                 <h4>GifCast</h4>
+                <p>Your current weather - with a visual</p>
             </div>
 
-            <div id="footer-explain" class="col s4 l4 container center-align white-text">
+            <div id="footer-explain" class="col s4 l4 center-align valign white-text">
                 <p>Weather-app meets GIF-app</p>
                 <p>GifCast makes you happy no matter what the weather is!</p>
             </div>
 
-            <div id="footer-icon" class="col s4 l4 right-align white-text valign">
-                <i class="large material-icons">cloud</i>
+            <div id="footer-icons" class="col s4 l4 center-align valign white-text">
+                <i class="medium material-icons">cloud</i>
+                <i class="medium material-icons">tag_faces</i>
             </div>
         </section>
     </footer>
