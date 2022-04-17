@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- CDN for Materialize: -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
         integrity="sha512-UJfAaOlIRtdR+0P6C3KUoTDAxVTuy3lnSXLyLKlHYJlcSU8Juge/mjeaxDNMlw9LgeIotgz5FP8eUQPhX1q10A=="
@@ -15,49 +15,55 @@
     <!-- Import Google Icon Font: -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <title>Gifcast: Weather with a visual.</title>
-
+    <title>GifCast: Weather with a visual</title>
 </head>
 
 <body>
 
-    <header>
-
 <!-- MAIN HEADER -->
-        <h1 class="center-align">Gifcast</h1>
-    <!-- SUBHEADER *under main (center) -->
-        <h3 class="center-align">Your current weather - with a visual.</h3>
+    <header class="center-align">
+        <h1 class="">GifCast</h1>
+        <!-- SUBHEADER *under main (center) -->
+        <h5>Your current weather - with a visual</h5>
     </header>
 
 <!-- MAIN CONTAINER (flex) -->
     <main id="main-container" class="row">
         <!-- the main content row holding the three columns -->
-        <section id="content" class="center-align">
+        <section id="content" class="">
 
 <!-- CITY SEARCH CARD (center) -->
             <form id="city-form" class="container center-align border .input-field">
-                <p class="">Search for any city:</p>
-                <i class="material-icons prefix">location_city</i>
+                <p class="flow-text">Search for any city:</p>
+                <i class="material-icons">location_city</i>
                 <input id="city-input" class="" type="text" placeholder="Enter a city for the current weather"
                     aria-label="Enter a city for the current weather">
+
     <!-- CARD BODY -->
                     <div id="card-body">
-                    <a id="city-button" class="waves-effect waves-light btn">search</a>
+                    <a id="city-button" class="btn cyan darken-4 waves-effect waves-light">
+                        <span>search</span>
+                        <i class="material-icons right">search</i>
+                    </a>
+
     <!-- LOCAL STORAGE HISTORY -->
                     <div id="history" class="collection hide">
                         <div id="history-list">
                         <!-- *anchor element added here for history list of cities -->
                         </div>
-                        <a id="clear-history" class="waves-effect waves-light btn">clear history</a>
+                        <a id="clear-history" class="btn-small cyan darken-4 waves-effect waves-light">
+                            <span>clear history</span>
+                            <i class="material-icons right">clear</i>
+                        </a>
                     </div>
                     <!-- app explination (center) -->
-                    <p id="card-text">Weather-app meets GIF-app. It makes you happy no matter what the weather is.</p>
+                    <p id="card-text">Weather-app meets GIF-app. GifCast makes you happy no matter what the weather is!</p>
                 </div>
             </form>
 
 <!-- OPEN WEATHER API DATA (left) -->
-            <div id="current-weather-box" class="hide col s3">
-                <div id="weather-body" class="positioned-left border-card card small">
+            <div id="current-weather-box" class="left-aligned col s3 hide">
+                <div id="weather-body" class="border-card card small">
                     <h4 id="city-given" class="card-title"></h4>
                     <img id="weather-icon" alt="" class="card-image">
                     <div class="card-content collection">
@@ -68,7 +74,7 @@
             </div>
 
 <!-- GIPHY DATA (right) -->
-            <div id="giphy-box" class="hide col push-s7 positioned-right border-card card">
+            <div id="giphy-box" class="right-aligned col push-s7 border-card card hide">
                 <iframe id="gif" src="" width="480" height="269" frameBorder="0" class="giphy-embed gifSize card-image"
                     allowFullScreen></iframe>
                 <p>

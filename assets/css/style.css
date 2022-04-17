@@ -1,12 +1,10 @@
 /*  Maintain a consistent gif size when loading in from API */
-
 .gifSize {
     max-width: 275px;
     max-height: 275px;
 }
 
 /* adjust the posiiton of the weather info and gif */
-
 .positioned-left {
     margin-top: -197px;
     margin-right: 149px;
@@ -16,8 +14,7 @@
     margin-top: -197px;
 }
 
-/* border class to see final placement of div comment out or delete later */
-
+/* to see final placement of div*/
 .border {
     border: solid 1px black;
 }
