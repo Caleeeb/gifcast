@@ -10,11 +10,9 @@
 
 
 header {
-/* ABSOLUTELY DO NOT PUSH THIS WEIRD CHANGE TO PATH*/
-    background-image: url("../../assets/images/clouds.jpg");
-/*---------------------------------------------------------*/
+
     background-size: cover;
-    padding-top: 50px;
+    padding-top: 30px;
     font-size: 20px;
     text-align: center;
 }
@@ -22,8 +20,9 @@ header {
 
 .main-title {
     width: 100%;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
 }
-
 
 footer {
     margin-top: 80px;
