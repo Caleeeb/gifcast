@@ -6,86 +6,130 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- cdn for materialize -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" integrity="sha512-UJfAaOlIRtdR+0P6C3KUoTDAxVTuy3lnSXLyLKlHYJlcSU8Juge/mjeaxDNMlw9LgeIotgz5FP8eUQPhX1q10A==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
-    <!-- CSS Style Sheet  -->
+    <!-- CDN for Materialize: -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+        integrity="sha512-UJfAaOlIRtdR+0P6C3KUoTDAxVTuy3lnSXLyLKlHYJlcSU8Juge/mjeaxDNMlw9LgeIotgz5FP8eUQPhX1q10A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- CSS Style Sheet: -->
     <link href="./assets/css/style.css" rel="stylesheet" type="text/css" media="all">
 
-        <!--Import Google Icon Font-->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      
+    <!-- Import Google Icon Font: -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-
-    <title>Gifcast: Weather with a visual.</title>
-
+    <title>GifCast: Weather with a visual</title>
 </head>
 
+
 <body>
-    <header>
 
-        <!-- main header, center -->
-        <h1 class="center-align">Gifcast</h1>
-
-        <!-- subheader, under main, center. -->
-        <h3 class="center-align">Your current weather with a visual.</h3>
+<!-- MAIN HEADER -->
+    <header class="center-align">
+        <div class="main-title">
+            <h1>GifCast</h1>
+            <p>Your current weather - with a visual</p>
+        </div>
     </header>
+    <br />
 
-    <!-- main-container, holding all items. Flex. -->
-    <main id="main-container" class="row">
+
+<!-- MAIN CONTAINER (flex) -->
+    <main id="container" class="center-align">
 
         <!-- the main content row holding the three columns -->
-        <div id="content" class="center-align">
+        <section id="content" class="row valign-wrapper">
 
-            <!-- could use a card for the city entry form/input (center) -->
-            <form id="city-form" class="container center-align border .input-field">
-                <p class="">Search for any city:</p>
-                <i class="material-icons prefix">location_city</i>
-                <input id="city-input" class="" type="text" placeholder="Enter a city for the current weather" aria-label="Enter a city for the current weather">
-                <div id="card-body">
-                    <a id="city-button" class="waves-effect waves-light btn">search</a>
 
-                    <!-- search items from local storage are listed-->
+<!-- OPEN WEATHER API DATA (left) -->
+            <div id="current-weather-box" class="col s12 l4 container center-align hide">
+
+                <h4 id="city-given"></h4>
+
+                <img id="weather-icon" 
+                    alt="a simple icon displaying the weather forecast (such as a sun, cloud, rain, etc)">
+
+                <div class="weather-content collection">
+                    <p id="description" class="collection-item"></p>
+                    <p id="temp" class="collection-item"></p>
+                </div>
+            </div>
+
+
+<!-- CITY SEARCH FORM (center) -->
+            <form id="city-form" class="col s12 l4 container center-align col s3 border .input-field">
+
+                <p class="flow-text">Search for any city:</p>
+                <i class="material-icons">location_city</i>
+                
+                <input id="city-input" class="" type="text" placeholder="Enter a city for the current weather"
+                    aria-label="Enter a city for the current weather">
+
+    <!-- CITY SEARCH -->
+                    <div>
+                        <a id="city-button" class="btn blue-grey waves-effect waves-light">
+                        <span>search</span>
+                        <i class="material-icons right">search</i>
+                    </a>
+
+    <!-- LOCAL STORAGE HISTORY -->
                     <div id="history" class="collection hide">
+
                         <div id="history-list">
-
-                            <!-- anchor element added here for history list of cities -->
-
+                        <!-- *anchor element added here for history list of cities -->
                         </div>
-                        <a id="clear-history" class="waves-effect waves-light btn">clear history</a>
-                    </div>
 
-                    <!-- application explination textbox under the input card (center) -->
-                    <p id="card-text"> **Description of app** </p>
+                        <!-- clear history -->
+                        <a id="clear-history" class="btn-small blue-grey waves-effect waves-light">
+                            <span>clear history</span>
+                            <i class="material-icons right">clear</i>
+                        </a>
+                    </div>
                 </div>
             </form>
 
-            <!-- empty elements to give a destination for the openweatherapp data (left side) -->
-            <div id="current-weather-box" class="hide col s3">
-                <div id="weather-body" class="positioned-left border-card card small">
-                    <h4 id="city-given" class="card-title"></h4>
-                    <img id="weather-icon" alt="" class="card-image">
-                    <div class="card-content collection">
-                        <p id="description" class="collection-item border-card"></p>
-                        <p id="temp" class="collection-item"></p>
-                    </div>
 
-                </div>
-            </div>
+<!-- GIPHY DATA (right) -->
+        <div id="giphy-box" class="col s12 l4 container center-align hide">
 
-            <!-- empty elements to give a destination for the GIPHY data (right side) -->
-            <div id="giphy-box" class="hide col push-s7 positioned-right border-card card">
-                <iframe id="gif" src="" width="480" height="269" frameBorder="0" class="giphy-embed gifSize card-image" allowFullScreen></iframe>
-                <p>
-                    <a id="gif-href" href=""></a>
-                </p>
-            </div>
+            <iframe id="gif" src="" width="480" height="269" frameBorder="0" class="giphy-embed gifSize"
+                allowFullScreen></iframe>
+            <p>
+                <a id="gif-href" href=""></a>
+            </p>
         </div>
 
+        </section>
     </main>
+
+    <br />
+
+
+<!-- FOOTER: -->
+    <footer>
+        <section id="footer-content" class="blue-grey darken-3" style=" display: flex; justify-content: space-around; align-items: center">
+            
+            <div id="footer-title" class="col s4 l4 center-align valign white-text">
+                <h4>GifCast</h4>
+                <p>Your current weather - with a visual</p>
+            </div>
+
+            <div id="footer-explain" class="col s4 l4 center-align valign white-text">
+                <p>Weather-app meets GIF-app</p>
+                <p>GifCast makes you happy no matter what the weather is!</p>
+            </div>
+
+            <div id="footer-icons" class="col s4 l4 center-align valign white-text">
+                <i class="medium material-icons">cloud</i>
+                <i class="medium material-icons">tag_faces</i>
+            </div>
+        </section>
+    </footer>
+
+
+<!-- SCRIPTS: -->
     <script src="./assets/js/script.js"></script>
-        <!-- Compiled and minified JavaScript -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
 </body>
 
 </html>
