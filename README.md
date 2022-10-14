@@ -78,7 +78,7 @@ A weather API used to collect data on local forecast, and then return a gif base
 ![image](https://user-images.githubusercontent.com/99810565/163739352-99cd7d06-de7d-49ef-b016-bb263abe6053.png)
 
 
-## https://cardenas1850.github.io/project-1/
+## https://cardenas1850.github.io/gifcast/
 
 ### Technologies used:
 
